@@ -46,6 +46,26 @@ h1 {
   animation: glitch 1s infinite;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+  @media (max-width: 768px) {
+  .gallery img {
+    width: 100%; /* una por línea */
+  }
+}
+
 /* efecto glitch */
 @keyframes glitch {
   0% { text-shadow: 3px 0 red; }
@@ -138,6 +158,24 @@ footer {
   50% { opacity: 0; }
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+  header {
+    padding: 60px 15px;
+    background-size: contain; /* muestra la imagen completa */
+  }
+
+  h1 {
+    font-size: 2rem; /* antes 4rem = gigante en móvil */
+    letter-spacing: 2px;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+}  
 </style>
 </head>
 
@@ -213,15 +251,13 @@ footer {
   <p>
     Repertorio: 60 min en escenario.
   </p>
-   <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/tHOZQZPXs18" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/tHOZQZPXs18"
+    frameborder="0"
     allowfullscreen>
   </iframe>
+</div>
 </section>
 
 <section>

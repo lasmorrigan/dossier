@@ -67,6 +67,22 @@ h1 {
   }
 }
 
+  /* efecto VHS al cargar vídeo*/
+.video-container {
+  filter: contrast(1.1) saturate(1.2);
+  box-shadow: 0 0 20px red;
+}
+  
+ /* efecto glitch suave en el iframe*/
+.video-container iframe {
+  transition: transform 0.3s;
+}
+
+.video-container iframe:hover {
+  transform: scale(1.02) rotate(-0.5deg);
+}
+  
+
 /* efecto glitch */
 @keyframes glitch {
   0% { text-shadow: 3px 0 red; }

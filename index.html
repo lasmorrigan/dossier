@@ -69,15 +69,20 @@ h1 {
 }
 
 /* efecto glitch */
-@keyframes glitch {
-  0% { text-shadow: 3px 0 red; }
-  20% { text-shadow: -3px 0 blue; }
-  40% { text-shadow: 3px 3px red; }
-  60% { text-shadow: -3px -3px blue; }
-  80% { text-shadow: 3px -3px red; }
-  100% { text-shadow: 0 0 white; }
+  .video-container iframe {
+  animation: glitchSkew 2s infinite;
 }
 
+@keyframes glitchSkew {
+  0% { transform: none; }
+  20% { transform: skewX(2deg); }
+  21% { transform: none; }
+  40% { transform: skewY(-2deg); }
+  41% { transform: none; }
+  60% { transform: scale(1.01); }
+  61% { transform: none; }
+}
+  
 header p {
   color: #aaa;
 }

@@ -155,17 +155,13 @@ footer {
 
 /* efecto parpadeo */
 .blink {
-  position: relative;
-  display: block;
-  margin-top: 20px;
-
+  animation: neonBlink 1.2s infinite alternate;
+  color: #ff0000;
   font-size: 2rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-
-  color: #ff0000;
-
-  animation: vhsGlitch 1s infinite steps(2, end);
+  display: block;
+  margin-top: 20px;
 }
 
 /* brillo neón */
@@ -196,40 +192,7 @@ footer {
     opacity: 1;
   }
 }
-@keyframes vhsGlitch {
-  0% {
-    transform: translate(0);
-    text-shadow: 2px 0 red, -2px 0 blue;
-    opacity: 1;
-  }
 
-  20% {
-    transform: translate(-2px, 1px);
-    text-shadow: -3px 0 red, 3px 0 blue;
-  }
-
-  40% {
-    transform: translate(2px, -1px);
-    text-shadow: 3px 0 red, -3px 0 blue;
-  }
-
-  60% {
-    transform: translate(-1px, 2px);
-    text-shadow: -2px 0 red, 2px 0 blue;
-    opacity: 0.8;
-  }
-
-  80% {
-    transform: translate(1px, -2px);
-    text-shadow: 4px 0 red, -4px 0 blue;
-  }
-
-  100% {
-    transform: translate(0);
-    text-shadow: 2px 0 red, -2px 0 blue;
-    opacity: 1;
-  }
-}
 /* MOBILE */
 @media (max-width: 768px) {
   header {
@@ -335,10 +298,8 @@ footer {
   <h2>Directo</h2>
   <p>Repertorio: 60 min en escenario.</p>
   <br>
-  <div class="vhs-frame">
-   <div class="base-asset-video">
+  <div class="base-asset-video">
     <iframe src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
-   </div>
   </div>
 </section>
 

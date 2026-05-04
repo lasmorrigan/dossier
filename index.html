@@ -278,6 +278,10 @@ footer {
     Tu navegador no soporta el vídeo.
   </video>
 </div>
+
+  <div class="base-asset-video">
+  <iframe width="650" height="366" src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
+ </div>
 </section>
 
   
@@ -300,11 +304,13 @@ footer {
 
   
 <script>
-const v = document.getElementById('miVideo');
-  v.addEventListener('click', () => {
-  v.muted = false;
-  v.volume = 1;
-});
+
+    function removeBaseAssetClass(divId) {
+    const videoElement = document.getElementById(divId);
+    const videoParent = videoElement.parentElement.parentElement;
+    videoParent.classList.remove('base-asset-video');
+  }
+
 </script>
 
 

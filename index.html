@@ -25,6 +25,7 @@ body::before {
   background: url('https://grainy-gradients.vercel.app/noise.svg');
   opacity: 0.15;
   pointer-events: none;
+  z-index: 0
 }
 
 /* HEADER */
@@ -285,8 +286,8 @@ footer {
     <li>Dios salve al rey — 2025</li>
   </ul>
 
-  <p>SPOTIFY: <a href="#">Escuchar</a></p>
-  <p>YOUTUBE MUSIC: <a href="#">Escuchar</a></p>
+  <p>SPOTIFY: <a href="https://open.spotify.com/intl-es/album/1gRxIfRhXMeQphCTBcw1bj">Escuchar</a></p>
+  <p>YOUTUBE MUSIC: <a href="https://www.youtube.com/channel/UCFu2KT1qBaZztV9qApX8ibw">Escuchar</a></p>
 </section>
 
 <section>
@@ -300,10 +301,14 @@ footer {
 
 <section>
   <h2>Directo</h2>
-  <p>Repertorio: 60 min en escenario.</p>
-  <br>
+  <p>Repertorio: 60 min en escenario.<br></p>
+  
   <div class="base-asset-video">
-    <iframe src="https://www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
+    <iframe 
+    src="https://www.youtube.com/embed/tHOZQZPXs18"
+    title="Las Morrigan directo"
+    allowfullscreen>
+    </iframe>
   </div>
 </section>
 

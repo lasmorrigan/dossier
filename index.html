@@ -155,13 +155,17 @@ footer {
 
 /* efecto parpadeo */
 .blink {
-  animation: neonBlink 1.2s infinite alternate;
-  color: #ff0000;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+
   font-size: 2rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  display: block;
-  margin-top: 20px;
+
+  color: #ff0000;
+
+  animation: vhsGlitch 1s infinite steps(2, end);
 }
 
 /* brillo neón */
@@ -192,7 +196,40 @@ footer {
     opacity: 1;
   }
 }
+@keyframes vhsGlitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 2px 0 red, -2px 0 blue;
+    opacity: 1;
+  }
 
+  20% {
+    transform: translate(-2px, 1px);
+    text-shadow: -3px 0 red, 3px 0 blue;
+  }
+
+  40% {
+    transform: translate(2px, -1px);
+    text-shadow: 3px 0 red, -3px 0 blue;
+  }
+
+  60% {
+    transform: translate(-1px, 2px);
+    text-shadow: -2px 0 red, 2px 0 blue;
+    opacity: 0.8;
+  }
+
+  80% {
+    transform: translate(1px, -2px);
+    text-shadow: 4px 0 red, -4px 0 blue;
+  }
+
+  100% {
+    transform: translate(0);
+    text-shadow: 2px 0 red, -2px 0 blue;
+    opacity: 1;
+  }
+}
 /* MOBILE */
 @media (max-width: 768px) {
   header {

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Las Morrigan</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: 'Special Elite', monospace;
+  overflow-x: hidden;
+}
+
+/* ruido de fondo */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 10px;
+  border-bottom: 3px solid red;
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("img/logo.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  animation: glitch 1s infinite;
+}
+
+header p {
+  color: #aaa;
+}
+
+/* VIDEO RESPONSIVE */
+.base-asset-video {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.base-asset-video::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.base-asset-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* secciones */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 10px;
+  border-bottom: 1px dashed #333;
+}
+
+h2 {
+  color: red;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  transform: rotate(-1deg);
+}
+
+/* estilo fanzine */
+p {
+  transform: rotate(0.3deg);
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* quote */
+.quote {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid white;
+  background: #111;
+  transform: rotate(-1deg);
+}
+
+/* collage fotos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 30%;
+  filter: contrast(120%) grayscale(100%);
+  transform: rotate(-2deg);
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: rotate(2deg) scale(1.05);
+  filter: none;
+}
+
+/* enlaces */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* efecto parpadeo */
+.blink {
+  animation: blink 0.8s infinite;
+  color: red;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+    background-size: contain;
+  }
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .gallery img {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LAS MORRIGAN</h1>
+  <p class="blink">PUNK ROCK</p>
+</header>
+
+<section>
+  <h2>Biografía</h2>
+  <p>
+    Las Morrigan es una banda de punk rock de Olite-Erriberri (Navarra) formada en 2025. Ese mismo año 
+    publica varios singles y es en 2026 cuando graba su primer album "Las Morrigan" de siete canciones.
+  </p>
+  <p>
+  Una formación que funciona como un bloque sólido. Transforma cada tema en una descarga de energía colectiva. 
+  Vibrante y sin artificios con un sonido intenso y letras que no piden permiso.
+  Cuenta con actitud directa y sin filtro que conecta con públicos de todas las edades.
+  </p>
+
+  <div class="quote">
+    “¡No, no lo entendéis! ¿No lo veis? ¡Tenéis que pensar por vosotros mismos!
+    ¡No sigáis a nadie!”
+  </div>
+</section>
+
+<section>
+  <h2>Miembros</h2>
+  <ul>
+    <li>Itsaso — voz</li>
+    <li>Angel — guitarra</li>
+    <li>Mikel — bajo</li>
+    <li>Isaak — batería</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Influencias</h2>
+  <ul>
+    <li>Sex Pistols</li>
+    <li>Dead Kennedys</li>
+    <li>Cock Sparrer</li>
+    <li>Toy Dolls</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Discografía</h2>
+  <ul>
+    <li>Las Morrigan (album) — 2026</li>
+    <li>Felicidad sintética — 2025</li>
+    <li>Jubilados al peso — 2025</li>
+    <li>Fascista de salón — 2025</li>
+    <li>Dios salve al rey — 2025</li>
+  </ul>
+
+  <p>SPOTIFY: <a href="#">Escuchar</a></p>
+  <p>YOUTUBE MUSIC: <a href="#">Escuchar</a></p>
+</section>
+
+<section>
+  <h2>Fotos</h2>
+  <div class="gallery">
+    <img src="https://drive.google.com/thumbnail?id=1RlcFRriwIUVinuakkx0vvL53n_-4NVqe&sz=w1000">
+    <img src="https://drive.google.com/thumbnail?id=13XykiEyu67_i9UFkYPyEADczzJNchgWn&sz=w1000">
+    <img src="https://drive.google.com/thumbnail?id=1RIkvVPt3K-ns9m_mPpEK6RqUE79vfcQR&sz=w1000">
+  </div>
+</section>
+
+<section>
+  <h2>Directo</h2>
+  <p>Repertorio: 60 min en escenario.</p>
+  <br>
+  <div class="base-asset-video">
+    <iframe src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>Teléfono: 620620620</p>
+  <p>Email: lasmorriganpunkrock@gmail.com</p>
+  <p>
+    Web:
+    <a href="https://lasmorrigan.github.io/band/" target="_blank">
+      lasmorrigan.github.io/band
+    </a>
+  </p>
+</section>
+
+<footer>
+  © LAS MORRIGAN 2026
+</footer>
+
+</body>
+</html>

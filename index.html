@@ -32,7 +32,6 @@ header {
   padding: 50px 10px;
   border-bottom: 3px solid red;
   position: relative;
-
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url("img/logo.jpg");
   background-size: contain;
@@ -44,21 +43,24 @@ h1 {
   font-size: 4rem;
   letter-spacing: 6px;
   text-transform: uppercase;
-  animation: glitch 1s infinite;
 }
 
-  .base-asset-video {
+header p {
+  color: #aaa;
+}
+
+/* VIDEO RESPONSIVE */
+.base-asset-video {
   position: relative;
   width: 100%;
-  max-width: 900px; /* opcional, para que no sea gigante en pantallas grandes */
+  max-width: 900px;
   margin: auto;
 }
 
-/* truco responsive 16:9 */
 .base-asset-video::before {
   content: "";
   display: block;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
 }
 
 .base-asset-video iframe {
@@ -68,46 +70,6 @@ h1 {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  filter: contrast(1.1) saturate(1.2); /* efecto VHS al cargar vídeo*/
-  box-shadow: 0 0 20px red;
- }
-  /* efecto glitch suave en el iframe*/
-.video-container iframe {
-  transition: transform 0.3s;
-}
-.video-container iframe:hover {
-  transform: scale(1.02) rotate(-0.5deg);
-}
-  
-  @media (max-width: 768px) {
-  .gallery img {
-    width: 100%; /* una por línea */
-  }
-}
-
-/* efecto glitch */
-  .video-container iframe {
-  animation: glitchSkew 2s infinite;
-}
-
-@keyframes glitchSkew {
-  0% { transform: none; }
-  20% { transform: skewX(2deg); }
-  21% { transform: none; }
-  40% { transform: skewY(-2deg); }
-  41% { transform: none; }
-  60% { transform: scale(1.01); }
-  61% { transform: none; }
-}
-  
-header p {
-  color: #aaa;
 }
 
 /* secciones */
@@ -192,16 +154,19 @@ footer {
 @media (max-width: 768px) {
   header {
     padding: 60px 15px;
-    background-size: contain; /* muestra la imagen completa */
+    background-size: contain;
   }
   h1 {
-    font-size: 2rem; /* antes 4rem = gigante en móvil */
+    font-size: 2rem;
     letter-spacing: 2px;
   }
   header p {
     font-size: 0.9rem;
   }
-}  
+  .gallery img {
+    width: 100%;
+  }
+}
 
 </style>
 </head>
@@ -210,28 +175,21 @@ footer {
 
 <header>
   <h1>LAS MORRIGAN</h1>
-  <p></p>
   <p class="blink">PUNK ROCK</p>
 </header>
 
 <section>
   <h2>Biografía</h2>
-
   <p>
-    Las Morrigan es una banda de punk rock de Olite-Erriberri (Navarra) formada en 2025. Cuenta con actitud directa
-    y sin filtro que conecta con públicos de todas las edades.
+    Las Morrigan es una banda de punk rock de Olite-Erriberri (Navarra) formada en 2025...
   </p>
-
   <p>
-    Una formación que funciona como un bloque sólido. Transforma cada tema en una descarga de energía colectiva. Vibrante y sin artificios. 
-    Sonido intenso y letras que no piden permiso.
+    Una formación que funciona como un bloque sólido...
   </p>
 
   <div class="quote">
-    “¡No, no lo entendéis! ¿No lo veis? ¡Tenéis que pensar por vosotros mismos!
-    ¡No sigáis a nadie!”
+    “¡No, no lo entendéis!...”
   </div>
-
 </section>
 
 <section>
@@ -254,45 +212,38 @@ footer {
   </ul>
 </section>
 
-  
 <section>
   <h2>Discografía</h2>
   <ul>
-    <li>Las Morrigan (album) —  2026</li>
-    <li>Felicidad sintética (single) — 2025</li>
-    <li>Jubilados al peso (single) — 2025</li>
-    <li>Fascista de salón (single) — 2025</li>
-    <li>Dios salve al rey (single) — 2025</li>
-    <br>
+    <li>Las Morrigan (album) — 2026</li>
+    <li>Felicidad sintética — 2025</li>
+    <li>Jubilados al peso — 2025</li>
+    <li>Fascista de salón — 2025</li>
+    <li>Dios salve al rey — 2025</li>
   </ul>
-  
-   <p>SPOTIFY: <a href="https://open.spotify.com/intl-es/artist/76LSRzHD4fecg14ylTwxHa?si=u9_VHJ46SP6jv69ju2G4aQ&nd=1&dlsi=cbda13a0f9ee4cb0" target="_blank"> Escuchar</a></p>
-   <p>YOUTUBE MUSIC: <a href="https://www.youtube.com/channel/UCFu2KT1qBaZztV9qApX8ibw" target="_blank"> Escuchar</a></p>
+
+  <p>SPOTIFY: <a href="#">Escuchar</a></p>
+  <p>YOUTUBE MUSIC: <a href="#">Escuchar</a></p>
 </section>
 
-  
 <section>
   <h2>Fotos</h2>
   <div class="gallery">
     <img src="https://drive.google.com/thumbnail?id=1RlcFRriwIUVinuakkx0vvL53n_-4NVqe&sz=w1000">
     <img src="https://drive.google.com/thumbnail?id=13XykiEyu67_i9UFkYPyEADczzJNchgWn&sz=w1000">
     <img src="https://drive.google.com/thumbnail?id=1RIkvVPt3K-ns9m_mPpEK6RqUE79vfcQR&sz=w1000">
-     </div>
+  </div>
 </section>
 
-  
 <section>
   <h2>Directo</h2>
-  <p>
-    Repertorio: 60 min en escenario.
-    <br>
-  </p>
- <div class="base-asset-video">
-  <iframe src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
- </div>
+  <p>Repertorio: 60 min en escenario.</p>
+
+  <div class="base-asset-video">
+    <iframe src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
+  </div>
 </section>
 
-  
 <section>
   <h2>Contacto</h2>
   <p>Teléfono: 620620620</p>
@@ -303,27 +254,11 @@ footer {
       lasmorrigan.github.io/band
     </a>
   </p>
- 
 </section>
 
 <footer>
   © LAS MORRIGAN 2026
 </footer>
 
-  
-<script>
-function removeBaseAssetClass(divId) {
-const videoElement = document.getElementById(divId);
-const videoParent = videoElement.parentElement.parentElement;
-videoParent.classList.remove('base-asset-video');
-}
-</script>
-
-
 </body>
 </html>
-
-
-
-
-

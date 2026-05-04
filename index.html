@@ -47,7 +47,7 @@ h1 {
   animation: glitch 1s infinite;
 }
 
-.video-container {
+.base-asset-video {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -272,15 +272,8 @@ footer {
     Repertorio: 60 min en escenario.
     <br>
   </p>
-<div class="video-container">
-  <video id="miVideo" controls preload="metadata" playsinline>
-    <source src="img/promo.mp4" type="video/mp4">
-    Tu navegador no soporta el vídeo.
-  </video>
-</div>
-
-  <div class="base-asset-video">
-  <iframe width="650" height="366" src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
+ <div class="base-asset-video">
+  <iframe src="//www.youtube.com/embed/tHOZQZPXs18" allowfullscreen></iframe>
  </div>
 </section>
 
@@ -304,13 +297,11 @@ footer {
 
   
 <script>
-
-    function removeBaseAssetClass(divId) {
-    const videoElement = document.getElementById(divId);
-    const videoParent = videoElement.parentElement.parentElement;
-    videoParent.classList.remove('base-asset-video');
-  }
-
+function removeBaseAssetClass(divId) {
+const videoElement = document.getElementById(divId);
+const videoParent = videoElement.parentElement.parentElement;
+videoParent.classList.remove('base-asset-video');
+}
 </script>
 
 

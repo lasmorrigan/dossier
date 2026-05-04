@@ -155,19 +155,42 @@ footer {
 
 /* efecto parpadeo */
 .blink {
-  animation: blink 0.8s infinite;
-  color: red;
-  letter-spacing: 3px;
+  animation: neonBlink 1.2s infinite alternate;
+  color: #ff0000;
+  font-size: 2rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
   display: block;
   margin-top: 20px;
-  position: relative;
-  z-index: 2;
-  font-size: 2rem;
 }
 
-@keyframes blink {
-  50% { opacity: 0; }
+/* brillo neón */
+@keyframes neonBlink {
+  0% {
+    text-shadow:
+      0 0 2px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 40px #ff0000;
+    opacity: 1;
+  }
+
+  50% {
+    text-shadow:
+      0 0 1px #ff0000,
+      0 0 5px #ff0000,
+      0 0 10px #ff0000;
+    opacity: 0.6;
+  }
+
+  100% {
+    text-shadow:
+      0 0 3px #ff0000,
+      0 0 15px #ff0000,
+      0 0 30px #ff0000,
+      0 0 60px #ff0000;
+    opacity: 1;
+  }
 }
 
 /* MOBILE */

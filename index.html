@@ -75,11 +75,10 @@ header p {
   position: relative;
   width: 100%;
   max-width: 900px;
-  margin: 10px auto;
- .base-asset-video + .base-asset-video {
- margin-top: 10px;
+  margin: 15px auto;
 }
- /* para YouTube */
+
+/* YouTube */
 .base-asset-video::before {
   content: "";
   display: block;
@@ -95,16 +94,15 @@ header p {
   border: none;
 }
 
-
-/* para mp4 */
+/* MP4 */
 .base-asset-video video {
   width: 100%;
   max-width: 600px;
-  height: auto;
   display: block;
-  margin: auto;
+  margin: 10px auto 0;
 }
 
+  
 /* secciones */
 section {
   max-width: 900px;
@@ -258,10 +256,6 @@ footer {
 
         .social-links a:hover { color: var(--main-red); }
 
-  .video-label {
-  margin: 5px 0 5px;
-  color: #aaa;
-  transform: rotate(0.3deg);
 }
   
  </style>
@@ -311,7 +305,7 @@ footer {
     </iframe>
     </div>
 
-<p class="video-label">Montaje</p>
+<p>Montaje</p>
   <div class="base-asset-video">
     <video controls>
     <source src="img/casaafrica.mp4" type="video/mp4">

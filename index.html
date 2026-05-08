@@ -4,9 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Las Morrigan</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+ /* Variables de color */
+        :root {
+            --bg-black: #000000;
+            --main-red: #cc0000;
+            --cream-beige: #e5d8c1;
+            --subtle-red: #330000;
+            --dark-gray: #1a1a1a;
+        }
 
 body {
   margin: 0;
@@ -220,6 +229,21 @@ footer {
   }
 }
 
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: var(--cream-beige);
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--main-red); }
+
  </style>
 </head>
 
@@ -232,25 +256,17 @@ footer {
 </header>
 
 <section>
-  <h2>Biografía</h2>
-  <p>
-  Las Morrigan es una banda de punk rock de Olite-Erriberri (Navarra), formada en 2025.
-    <br> 
-  Ese mismo año publican sus primeros singles y, en 2026, graban su primer álbum homónimo, 
-   “Las Morrigan”, compuesto por siete temas.
-  </p>
-  <p>
-  También en 2025 colaboran con Marco Canale, director de teatro y cine argentino, quien les pidió utilizar 
-  una canción suya, «Felicidad sintética», en su taller «La velocidad de la luz» en el XXVI Festival de Teatro Clásico de Olite.
-  </p>
-  <p>
-  La banda se caracteriza por un sonido directo e intenso, con una propuesta centrada en el formato de directo. 
-  Sus conciertos destacan por la energía y la cercanía con el público, conectando con asistentes de distintas edades y perfiles.  
-  </p>
+ 
 
-  <div class="quote">
-    “¿Que no lo he dicho claro? ¿Qué pasa? ¿Que estais sordos? ¡PUES QUE SIGÁIS PRINGANDO!”
-  </div>
+<h2>Quiénes Somos</h2>
+<p>Las Morrigan somos un grupo de punk-rock formado en 2025, con un directo enérgico, cercano y apto para todos los públicos.
+</p>
+
+<p>Apostamos por canciones propias y combinamos nuestro repertorio con algunas versiones, buscando crear buen ambiente y conectar con el público desde el primer momento para que la gente disfrute, cante y se lo pase bien.
+</p>
+<p>Nuestro objetivo es ofrecer conciertos dinámicos, auténticos y fáciles de disfrutar tanto en festivales como en salas y eventos culturales.
+</p>
+<p> Tenemos un repertorio de 60 minutos sobre el escenario</p>
 </section>
 
 <section>
@@ -264,13 +280,26 @@ footer {
 </section>
 
 <section>
-  <h2>Influencias</h2>
-  <ul>
-    <li>Sex Pistols</li>
-    <li>Dead Kennedys</li>
-    <li>Cock Sparrer</li>
-    <li>Toy Dolls</li>
-  </ul>
+  <h2>Videos</h2>
+  <p>Directo<br></p>
+  
+  <div class="base-asset-video">
+    <iframe 
+    src="https://www.youtube.com/embed/BdZUqXkNeww"
+    title="Las Morrigan directo"
+    allowfullscreen>
+    </iframe>
+  </div>
+
+<p>Montaje<br></p>
+  <div class="base-asset-video">
+    <iframe 
+    src="https://www.youtube.com/embed/BdZUqXkNeww"
+    title="Las Morrigan directo"
+    allowfullscreen>
+    </iframe>
+  </div>
+
 </section>
 
 <section>
@@ -296,17 +325,36 @@ footer {
   </div>
 </section>
 
+
+
 <section>
-  <h2>Directo</h2>
-  <p>Repertorio: 60 min en escenario.<br></p>
-  
-  <div class="base-asset-video">
-    <iframe 
-    src="https://www.youtube.com/embed/BdZUqXkNeww"
-    title="Las Morrigan directo"
-    allowfullscreen>
-    </iframe>
-  </div>
+ <h2>Biografía</h2>
+  <p>
+  Las Morrigan es una banda de punk rock de Olite-Erriberri (Navarra), formada en 2025.
+    <br> 
+  Ese mismo año publican sus primeros singles y, en 2026, graban su primer álbum homónimo, 
+   “Las Morrigan”, compuesto por siete temas.
+  </p>
+  <p>
+  También en 2025 colaboran con Marco Canale, director de teatro y cine argentino, quien les pidió utilizar 
+  una canción suya, «Felicidad sintética», en su taller «La velocidad de la luz» en el XXVI Festival de Teatro Clásico de Olite.
+  </p>
+  <p>
+  La banda se caracteriza por un sonido directo e intenso, con una propuesta centrada en el formato de directo. 
+  Sus conciertos destacan por la energía y la cercanía con el público, conectando con asistentes de distintas edades y perfiles.  
+  </p>
+
+ 
+</section>
+
+<section>
+  <h2>Influencias</h2>
+  <ul>
+    <li>Sex Pistols</li>
+    <li>Dead Kennedys</li>
+    <li>Cock Sparrer</li>
+    <li>Toy Dolls</li>
+  </ul>
 </section>
 
 <section>
@@ -319,11 +367,21 @@ footer {
       lasmorrigan.github.io/band
     </a>
   </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1A5ZrGNDsG/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/las_morrigan/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vb8kwfP5q08b2Mip8o47" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+
 </section>
 
 <footer>
   © LAS MORRIGAN 2026
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>

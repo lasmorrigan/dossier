@@ -77,11 +77,14 @@ header p {
   max-width: 900px;
   margin: auto;
 }
+
+/* para YouTube */
 .base-asset-video::before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
+
 .base-asset-video iframe {
   position: absolute;
   top: 0;
@@ -89,6 +92,13 @@ header p {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* para mp4 */
+.base-asset-video video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* secciones */
@@ -285,20 +295,18 @@ footer {
   
   <div class="base-asset-video">
     <iframe 
-    src="https://www.youtube.com/embed/BdZUqXkNeww"
+    src="https://www.youtube.com/embed/rSPuM-mPnxQ"
     title="Las Morrigan directo"
     allowfullscreen>
     </iframe>
   </div>
 
 <p>Montaje<br></p>
-  <div class="base-asset-video">
-    <iframe 
-    src="https://www.youtube.com/embed/BdZUqXkNeww"
-    title="Las Morrigan directo"
-    allowfullscreen>
-    </iframe>
-  </div>
+<div class="base-asset-video">
+  <video controls>
+    <source src="/img/casaafrica.mp4" type="video/mp4">
+  </video>
+</div>
 
 </section>
 
